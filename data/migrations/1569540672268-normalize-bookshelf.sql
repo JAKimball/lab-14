@@ -24,3 +24,31 @@ ALTER TABLE books DROP COLUMN bookshelf;
 
 -- Add the foreign key constraint
 ALTER TABLE books ADD CONSTRAINT fk_bookshelves FOREIGN KEY (bookshelf_id) REFERENCES bookshelves(id);
+
+  -- Console Output:
+  -- $ psql -f migrations/1569540672268-normalize-bookshelf.sql -d lab14_normal
+  -- CREATE TABLE
+  -- INSERT 0 8
+  -- count
+  -- -------
+  --     8
+  -- (1 row)
+
+  -- ALTER TABLE
+  -- UPDATE 10
+  -- bookshelf_id
+  -- --------------
+  --             1
+  --             1
+  --             2
+  --             3
+  --             4
+  --             5
+  --             6
+  --             6
+  --             7
+  --             8
+  -- (10 rows)
+
+  -- ALTER TABLE
+  -- ALTER TABLE
